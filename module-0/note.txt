@@ -1,0 +1,86 @@
+Class 01 - 21 October: Orientation Class
+---------------------------------------------
+---------------------------------------------
+1. VCS (GIT and GITHUB)
+2. Linux(Ubuntu)hjn
+3. Bash Scripting
+4. Networking
+5. Docker
+6. CICD
+7. Ansible
+8. Kubernites
+9. AWS
+10. Monitoring & Logging
+
+Class 1 - 25 October : Introduction to DevOps
+---------------------------------------------------------
+---------------------------------------------------------
+what is DevOps(principle and role) ?
+
+stapes:
+    1. plan: requirement analysis ,work place, server configuration, soft architecture, system design
+    2. code: feature development
+    3. build: test properly deploy and run application, anywhere run
+    4. test: tdd, etc
+    5. release: release stable code, artifact: package or docker image
+    6. deploy : live
+    7. operate:
+    8. monitor: debugging and Logging
+
+
+Software Development Life Cycle:
+    stage 1: Planning & requirement analysis
+    stage 2: Defining requirements
+    stage 3: Architecture Design
+    stage 4: Software Development
+    stage 5: Testing
+    stage 6: Deployment and Maintenance
+
+
+Agile Methodology:
+    1. Plane
+    2. Design
+    3. Develop
+    4. Test
+    5. Deploy
+    6. Review
+    7. Launch
+
+
+Devops(secure and govern):
+    1. Plane
+    2. create
+    3. verify
+    4. package
+    5. deploy
+    6. monitor: resource consume, cpu, ram
+    7. repeat
+
+# devops secure and governed
+# scale up
+
+Common roles and responsibilities:
+    1. Application & infrastructure planning, testing and development
+    2. Maintaining CI/CD pipeline
+    3. Automation implementation
+    4. On-call incident response and incident management
+    5. monitoring
+
+What will you learn ?
+1. Git(vcs)
+2. Scripting(bash)
+3. Linux
+4. Networking(http, DNS, VPC, Subnetting, Routing)
+5. CI/CD (Jenkins, Git Action)
+6. Containerization(Docker)
+7. Container Orchestration(Kubernetes)
+8. iaC and Provisioning(Terraform, Ansible)
+9. Cloud Service (AWS EC2, load balancing, s3, lambda, rds, vpc)
+10. Monitoring(Prometheus & Grafana)
+
+
+Prerequisites:
+1. Github Account
+2. Docker Hub Account
+3. Ubuntu 22.04 or ubuntu 24.04 Server VM(preferable)
+4. AWS Account (preferable)
