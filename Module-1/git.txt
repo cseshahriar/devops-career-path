@@ -1,0 +1,19 @@
+Live Class 02 - 23 October: Introduction to Git
+-----------------------------------------------
+# git commit message convention
+# code quality test
+
+Branches: shaka -> proshaka
+    git init  # initialization of git
+    git status
+    git add .
+    git commit -m "message"  # must present tense like 'create not created' add meaningful
+    git push
+
+    ----> sunday HEAD(unique number)
+    # staging
+    42"
+https://walaoeh.medium.com/level-up-your-vscode-terminal-to-oh-my-zsh-shell-on-windows-10-d3e067179b50
+
+Live Class 03 - 30 October: Introduction to Git
+-----------------------------------------------
