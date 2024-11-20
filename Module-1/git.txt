@@ -43,3 +43,11 @@ Live Class 02 - 23 October: Introduction to Git
 
 Live 03 - 30 October : Git reset and rebase
 -----------------------------------------------
+    git commit -m "New garbage commit" -m "This is a description example"
+    git log
+
+    small change:
+    git add .
+    git commit --amend
+    :wq
+    ctrl & X and Y
