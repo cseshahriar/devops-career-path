@@ -46,8 +46,29 @@ Live 03 - 30 October : Git reset and rebase
     git commit -m "New garbage commit" -m "This is a description example"
     git log
 
-    small change:
+    small change or quick fix:
     git add .
     git commit --amend
     :wq
     ctrl & X and Y
+
+    1. soft:
+    2. mixed(default): git reset --HEAD~1 # 1 commit previous got set the head
+    3. Hard:
+
+
+    1. mixed strategy (only commit remove, code did not remove):
+        git log:
+            commit dfcc7213632b72878408736b2c187cd690c292a7 --> HEAD
+            commit 2e7c8664e7908e8284d4e750006a026da13f639f
+            commit 93618f73caaee5f9abf107e93b5acc470505ce60
+            commit f61b17594ade1e8a3cfd54081a3e0d48fd13421a
+
+        git reset --HEAD~1
+            git log:
+            commit dfcc7213632b72878408736b2c187cd690c292a7
+            commit 2e7c8664e7908e8284d4e750006a026da13f639f --> HEAD
+            commit 93618f73caaee5f9abf107e93b5acc470505ce60
+            commit f61b17594ade1e8a3cfd54081a3e0d48fd13421a
+
+
