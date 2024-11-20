@@ -1,46 +1,44 @@
 Live Class 02 - 23 October: Introduction to Git
 -----------------------------------------------
-# git commit message convention
-# code quality test
+    # git commit message convention
+    # code quality test
 
-Branches: shaka -> proshaka
-    git init  # initialization of git
-    git status
-    git add .
-    git commit -m "message"  # must present tense like 'create not created' add meaningful
-    git push
+    Branches: shaka -> proshaka
+        git init  # initialization of git
+        git status
+        git add .
+        git commit -m "message"  # must present tense like 'create not created' add meaningful
+        git push
 
-    git log:
-        commit 9a3e7e2406cb062022f60282563366c72b25e705 (HEAD -> main)
-        Author: cseshahriar <cse.shahriar.hosen@gmail.com>
-        Date:   Wed Nov 20 20:17:35 2024 +0600
+        git log:
+            commit 9a3e7e2406cb062022f60282563366c72b25e705 (HEAD -> main)
+            Author: cseshahriar <cse.shahriar.hosen@gmail.com>
+            Date:   Wed Nov 20 20:17:35 2024 +0600
 
-            Create an empty file for git demo
+                Create an empty file for git demo
 
-        commit cb5d6f2692fdc2c79578061d61062cf6c7a508d6 (origin/main, origin/HEAD)
-        Author: cseshahriar <cse.shahriar.hosen@gmail.com>
-        Date:   Tue Nov 19 23:48:39 2024 +0600
+            commit cb5d6f2692fdc2c79578061d61062cf6c7a508d6 (origin/main, origin/HEAD)
+            Author: cseshahriar <cse.shahriar.hosen@gmail.com>
+            Date:   Tue Nov 19 23:48:39 2024 +0600
 
-            module 0
+                module 0
 
-        commit 52b562900fc920ae7b015fb3bf9672d12194bd00
-        Author: cseshahriar <cse.shahriar.hosen@gmail.com>
-        Date:   Tue Nov 19 20:08:11 2024 +0600
+            commit 52b562900fc920ae7b015fb3bf9672d12194bd00
+            Author: cseshahriar <cse.shahriar.hosen@gmail.com>
+            Date:   Tue Nov 19 20:08:11 2024 +0600
 
-            module 3 resources
+                module 3 resources
 
-        commit 941814bffa036a4489aedc303c4488183222a95a
-        Author: Md. Shahriar Hosen <cse.shahriar.hosen@gmail.com>
-        Date:   Mon Nov 18 21:17:31 2024 +0600
+            commit 941814bffa036a4489aedc303c4488183222a95a
+            Author: Md. Shahriar Hosen <cse.shahriar.hosen@gmail.com>
+            Date:   Mon Nov 18 21:17:31 2024 +0600
 
-            Initial commit message
-
+                Initial commit message
 
 
     ----> sunday HEAD(unique number)
-    # staging=
-    42"
-https://walaoeh.medium.com/level-up-your-vscode-terminal-to-oh-my-zsh-shell-on-windows-10-d3e067179b50
+    # staging
+    https://walaoeh.medium.com/level-up-your-vscode-terminal-to-oh-my-zsh-shell-on-windows-10-d3e067179b50
 
 Live Class 03 - 30 October: Introduction to Git
 -----------------------------------------------
