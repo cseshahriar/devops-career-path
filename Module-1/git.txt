@@ -40,5 +40,6 @@ Live Class 02 - 23 October: Introduction to Git
     # staging
     https://walaoeh.medium.com/level-up-your-vscode-terminal-to-oh-my-zsh-shell-on-windows-10-d3e067179b50
 
-Live Class 03 - 30 October: Introduction to Git
+
+Live 03 - 30 October : Git reset and rebase
 -----------------------------------------------
