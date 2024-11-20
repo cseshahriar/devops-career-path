@@ -71,4 +71,6 @@ Live 03 - 30 October : Git reset and rebase
             commit 93618f73caaee5f9abf107e93b5acc470505ce60
             commit f61b17594ade1e8a3cfd54081a3e0d48fd13421a
 
+    2. soft
+
 
