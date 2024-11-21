@@ -41,7 +41,7 @@ Live Class 02 - 23 October: Introduction to Git
     https://walaoeh.medium.com/level-up-your-vscode-terminal-to-oh-my-zsh-shell-on-windows-10-d3e067179b50
 
 
-Live 03 - 30 October : Git reset and rebase
+Live 03 - 30 October : Git reset and rebase (commit undo)
 -----------------------------------------------
     git commit -m "New garbage commit" -m "This is a description example"
     git log
@@ -102,3 +102,16 @@ Live 03 - 30 October : Git reset and rebase
         git rebase --continue
 
 
+Live 04 - 03 November: Git reflog and rebase
+--------------------------------------------
+    * reset and revert
+    * squash and merge, rebase and merge
+    * squash means mix
+    action undo:
+    git checkout -b "my-branch name" # action
+    git reflog
+    git checkout -b "test-branch"
+
+    if undo easiest way:
+    amon akta commint a jabo jekane action ta ghotainai
+    git reset HEAD@{3} 48"
