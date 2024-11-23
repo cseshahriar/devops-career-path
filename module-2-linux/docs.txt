@@ -1,0 +1,47 @@
+Live 07 - 11 November: Linux file system
+--------------------------------------------
+# list of current directory
+ls
+ls -a
+ls -la
+
+whoami  # check current user
+
+# set pass for a user
+sudo passwd root  # set password
+
+su - root # switch user
+cat filename.ext # see file
+cat os-release
+
+ls | grep grep
+ls | grep ma # search with start ma
+ls | grep ma | man
+ls | grep man | c  # copy
+ls | grep ma | wc -l # ma word count
+ls | grep ma | wc
+
+# create file and write
+touch filename.ext # crate filename.ext
+echo "1st line" > text.ext
+echo "2nd line" >> text.ext
+echo "3rd line" >> text.ext
+cat filename.ext
+sed -i '1d' text.txt # line 1 del
+
+cd .
+cd ..
+pwd
+
+mkdir # make directory
+
+
+cd /etc
+cat hostname
+
+Live 08 - 13 November: Linux file system and permissions
+--------------------------------------------------------
+
+
+Live 10 - 20 November: Linux file system and sudo
+--------------------------------------------------

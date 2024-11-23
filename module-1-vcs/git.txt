@@ -115,3 +115,6 @@ Live 04 - 03 November: Git reflog and rebase
     if undo easiest way:
     amon akta commint a jabo jekane action ta ghotainai
     git reset HEAD@{3} 48"
+
+Live 05 - 04 November: Git PR review
+-------------------------------------
