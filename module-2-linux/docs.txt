@@ -1,3 +1,8 @@
+Live 06: 06 November: Operating system discussion
+--------------------------------------------------
+
+
+
 Live 07 - 11 November: Linux file system
 --------------------------------------------
 # list of current directory
@@ -35,13 +40,105 @@ pwd
 
 mkdir # make directory
 
-
 cd /etc
 cat hostname
 
 Live 08 - 13 November: Linux file system and permissions
 --------------------------------------------------------
+df  # file system
+# mount
+# mnt ssd
+# media pendrive
+mount
+mover source destination
 
+touch test.sh
+executable put un bin
+pwd
+
+account:
+sudo account : root
+user has id
+
+system account: mail, sys
+
+id
+uid=0(root) gid=0(root) groups=0(root)
+
+who
+shosen   tty7         2024-11-23 18:47 (:0)
+
+cd etc
+cat passwd
+
+user and group
+-----------------------------------------------------------
+grep -i ^test /etc/passwd
+test:x:1001:1001::home/test:/bin/sh
+
+crate user
+grep -i devops /etc/passwd
+devops:x:1001:1002::/home/devops:/bin/sh
+        userid:group id
+
+groupadd -g 1007 devops02
+useradd -u 1007 -g 1007 -d /home/devops -s /bin/sh devops02
+
+grep -i devops /etc/passwd  # search for devops
+devops:x:1001:1002::/home/devops:/bin/sh
+devops02:x:1007:1007::/home/devops:/bin/sh
+
+for group delete:
+userdel devops02
+groupdel devops02
+
+cat /etc/group
+
+mysql:x:1001:
+group name and id
+
+cat shadow
+devops:!:20050:0:99999:7:::  # ! means no password
+
+useradd test
+useradd -u shahriar -p 1234
+
+useradd -m test5
+passwd test5
+
+
+permissions
+---------------------------------------------------
+-l text.txt
+-rw-r--r-- 1 root root 27 Nov 23 20:52 text.txt
+
+-rw for first root  # read, wright, - is nothing, owner, group,
+others user and other group only r means read permission
+
+-rwx for read, right, execution
+
+binary : 0 -> r, 1 -> w, 4 -> x
+alpha: r -> , w -> , x ->
+
+chmod u+rwx test.sh  # user plus read, wright, executable
+chmod ug+rwx test.sh  # user, group plus read, wright, executable
+chmod ugo+rwx test.sh  # user, group, other plus read, wright, executable
+chmod u+r, g+r, o+x text.sh
+chmod u+r, g+w, o+x text.sh
+
+chmod u+r--, g+-w-, g+-w-, o+--- text.sh
+read = 4, write = 2, executable = 1, no - 0
+600 =  2 + 4 = user:read, write, group:no,no,no, other:no,no,no
+700 =  2 + 4 + 1 = user:read, write, executable, group:no,no,no, other:no,no,no
+777 = user:group:other: read, write, executable,
+
+# - means file
+# d means directory drwxr--xr-x
+
+
+ls
+ls -a
+ls -la
 
 Live 10 - 20 November: Linux file system and sudo
 --------------------------------------------------
