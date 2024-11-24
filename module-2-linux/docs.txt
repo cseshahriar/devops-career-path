@@ -135,10 +135,20 @@ read = 4, write = 2, executable = 1, no - 0
 # - means file
 # d means directory drwxr--xr-x
 
+dev = device directory
+media/mnt = hard drive
+tmp = garbage directory
+user, group, permission
+bin: need for boot
+lib: libraries
+dev/null # black hol
 
+# list of files and directory
 ls
 ls -a
 ls -la
 
 Live 10 - 20 November: Linux file system and sudo
 --------------------------------------------------
+docker run -it ubuntu:latest
+30"
