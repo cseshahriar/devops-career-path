@@ -1,0 +1,13 @@
+Live 09 - 18 November: Bash scripting basics
+---------------------------------------------
+1. git access
+2. local development env
+    1. code clone -> script (shell /bash, python, js)
+    2. system requirements check -> (shell script)
+    3. rules/convention -> script
+    # shell standard
+3.
+
+
+#!/bin/bash  dev|executable script
+#!/bin/shell  production|executable script
