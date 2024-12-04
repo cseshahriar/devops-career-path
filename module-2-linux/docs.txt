@@ -151,4 +151,19 @@ ls -la
 Live 10 - 20 November: Linux file system and sudo
 --------------------------------------------------
 docker run -it ubuntu:latest
-30"
+su - root
+cat /et/gshadow
+
+useradd devops -m -p $(openssl passwd -1 1234)
+apt install vim
+
+# user group permissions
+visudo
+apt remove vim
+
+%sudo ALL=(ALL:ALL) ALL
+        all host = (user:group) all command
+
+sudo groupadd docker
+usermod -aG root devops # root ke devops group a add korlo
+id devops
