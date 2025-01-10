@@ -1,0 +1,19 @@
+Netlify Network Design Requirements:
+------------------------------------
+1. User input -> GH repo
+2. Deploy the code
+3. Paid users get more security
+4. charge -> user traffic
+5. DDOs protection
+6. user dashboard to monitor their app
+7. automated deployment
+8. Multi zone support
+9. cross cloud -> user selects aws or azure
+
+aws:
+----
+Net
+Sample network design diagram
+proxy and peering < better to ensure one way com
+aws technical guide
+private link
