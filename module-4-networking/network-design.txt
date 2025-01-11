@@ -17,3 +17,15 @@ Sample network design diagram
 proxy and peering < better to ensure one way com
 aws technical guide
 private link
+
+Load Balancer
+--------------
+dev/staging
+vpc:
+    public subnet -> NAT, LB -> mystore.com
+
+    private -> Mysql
+    private  -> kafka/asws kimesis(Hight volume data logs, activities) rabbitmq/aws sqs
+    private -> message broker and queues
+
+    cloudfront

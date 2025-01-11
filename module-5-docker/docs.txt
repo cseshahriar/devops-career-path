@@ -1,0 +1,39 @@
+Docker
+-------
+docker --version
+
+docker details:
+docker info
+
+pull:
+docker pull nginx
+# tag means version
+
+# run
+docker run --name some-nginx -d some-content-nginx
+
+# d = background running
+docker run -d nginx
+docker run --name app1-replica1 nginx
+
+# entry point
+docker ps -a # all
+docker ps # running list
+docker stop id
+docker start id
+
+
+remove:
+docker rm 96c0a959462e
+docker rm 27def5ad555f
+
+# run ubuntu
+docker pull ubuntu
+docker run -it ubuntu
+
+image list
+docker images
+
+
+docker pull nginx:stable-alpine
+# alpine linux
