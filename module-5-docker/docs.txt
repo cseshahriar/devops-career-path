@@ -46,6 +46,8 @@ docker run -it nginx bash
 
 docker pull nginx:stable-alpine
 docker run -it nginx:stable-alpine sh
+docker run --rm --name amadernginxcontainer -p 1234:80 nginx:stable-alpine
+http://localhost:1234/
 cat /etc/os-release
 
 docker run -it  nginx:stable-alpine
@@ -160,3 +162,10 @@ rmi for image
 https://github.com/wagoodman/dive
 
 dive amader-nginx-alpine:v1
+
+
+docker exec -it xenodochial_chandrasekhar sh
+docker run --rm --name amadernginxcontainer -p 1234:80 nginx-alpine:v1
+ps aux
+curl localhost
+nginx configuration
