@@ -1,5 +1,6 @@
-Docker
--------
+Docker basic class 1
+--------------------
+--------------------
 docker --version
 
 docker details:
@@ -22,7 +23,6 @@ docker ps # running list
 docker stop id
 docker start id
 
-
 remove:
 docker rm 96c0a959462e
 docker rm 27def5ad555f
@@ -34,6 +34,129 @@ docker run -it ubuntu
 image list
 docker images
 
-
 docker pull nginx:stable-alpine
 # alpine linux
+
+Docker image building and dockerfile introduction class 2:
+---------------------
+---------------------
+docker pull nginx:stable-alpine
+docker run -it nginx bash
+/# cat /etc/os-release
+
+docker pull nginx:stable-alpine
+docker run -it nginx:stable-alpine sh
+cat /etc/os-release
+
+docker run -it  nginx:stable-alpine
+docker run -it nginx:stable-alpine sh
+apk add bash
+hostname
+
+docker inspect nginx:stable-alpine:
+[
+    {
+        "Id": "sha256:4ebaceb1bd2e06a8a8257b380c406baa2f39423e864718c4a1010d5f33748900",
+        "RepoTags": [
+            "nginx:stable-alpine"
+        ],
+        "RepoDigests": [
+            "nginx@sha256:36a205371b630f0e4dea1aebe80952979405fcfc09be1c5f8407d061f4e97651",
+            "nginx@sha256:b9e1705b69f778dca93cbbbe97d2c2562fb26cac1079cdea4e40d1dad98f14fe"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2024-08-14T23:51:24Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.26.2",
+                "PKG_RELEASE=1",
+                "DYNPKG_RELEASE=2",
+                "NJS_VERSION=0.8.5",
+                "NJS_RELEASE=1"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 43277552,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/0970e648aa79bce28c9819232697d97a27c68433c17ad438c62fcd2c8bef45a3/diff:/var/lib/docker/overlay2/77932626d37010ba16278ecdc192fbc971c7bff90a4f28745545eded4c00b8c9/diff:/var/lib/docker/overlay2/b7f70545968e2b65f080eeb2c92b50459d02c2a6b4ae727f3c605d42364e7e7d/diff:/var/lib/docker/overlay2/ee106f88030a3d47efb689ec9584cc968d426b3e5869bd012003c403aee62822/diff:/var/lib/docker/overlay2/8e4708d3966aa6b36ef5866b13f09f1fb49d6c88e7afb53a9e13879eb0a97eb1/diff:/var/lib/docker/overlay2/1bbc999695c9ed5417720f0e382c9977685173ff860aa65e57d6c89a6b931178/diff:/var/lib/docker/overlay2/c4f8947b8c69640fc52bd829e20bb6ba64b8f07fef25633ebe6de0a394bb765b/diff",
+                "MergedDir": "/var/lib/docker/overlay2/08e77f08f6e0ccf3da703ab703b675b95ed4de886b51996b26854b70cdb9a1c1/merged",
+                "UpperDir": "/var/lib/docker/overlay2/08e77f08f6e0ccf3da703ab703b675b95ed4de886b51996b26854b70cdb9a1c1/diff",
+                "WorkDir": "/var/lib/docker/overlay2/08e77f08f6e0ccf3da703ab703b675b95ed4de886b51996b26854b70cdb9a1c1/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:ce5a8cde9eeef09160653b9c3d14f0c1c0e2900033476a5f2a9fc950161c0eb2",
+                "sha256:ffebbad4cff8032ba3f669c891d8550e8a4b77c549229d45fc667c036fe862e8",
+                "sha256:3012f2d5c309b7c527571e060f8085c2664548e84d456d79ce4960d4da2c6495",
+                "sha256:f8faf11c609ec70f0b1bc754598c41880fa2de9f1d5d518c4c2fd32c98095953",
+                "sha256:abd7f33ec37df392b665442ce9f2e8dc84caddb11cbe3c41e6e19d976acf5cf7",
+                "sha256:ee128c8f01aa9befa24eadfeea9af910cf3b141643ab50d817cc6fb11ab6e93a",
+                "sha256:f80a8fac336fcb1a0dd084655cf1933063e909471ae59e88ca85910a716826dd",
+                "sha256:9913e2a3170f98a79b1956c5cf873632f2bfcb01dbd300bfe406d09899804a0a"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+
+
+
+Dockerfile:
+<Instruction_code_name> <Instruction/command>
+docker reference
+docker build -t amader-nginx-alpine:v1
+docker images
+docker run -it amader-nginx-alpine:v1 bash
+docker rm id
+docker images -f "dangling=true"
+docker run -it --rm amader-nginx-alpine:v1 bash
+https://docs.docker.com/reference/dockerfile/
+
+Dockerfile
+.dockerignore
+db
+
+rm for container
+rmi for image
+https://github.com/wagoodman/dive
+
+dive amader-nginx-alpine:v1
