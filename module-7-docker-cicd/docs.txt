@@ -1,4 +1,14 @@
 # build and install dockerhub
 docker build -t shosen/docker-ic-batch-03:v1 .
 
-docker push shosen/docker-ic-batch-03:tagname
+# check images list
+docker images
+
+# docker login
+
+# access token authentication
+docker login -u shosen
+enter password
+
+# push
+docker push shosen/docker-ic-batch-03:v1
