@@ -14,5 +14,8 @@ COPY . .
 # run command
 RUN pip install -r requirements.txt
 
-# executable
+# executable,
 CMD ["python3", "main.py"]
+
+# entry point always runs
+ENTRYPOINT [ "python3", "main.py"]
