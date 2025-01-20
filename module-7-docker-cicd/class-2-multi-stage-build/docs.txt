@@ -1,0 +1,80 @@
+# build and install dockerhub
+docker build -t shosen/docker-ic-batch-03:v1 .
+
+# check images list
+docker images
+
+# docker login
+
+# access token authentication
+docker login -u shosen
+enter password
+
+# push
+docker push shosen/docker-ic-batch-03:v1
+
+# image : blue print / class / code, package, db, server, os, define everything
+# container: object/instance of image, image run korle container hoy
+
+# code change
+docker build -t shosen/docker-ic-batch-03:v2 .
+docker push shosen/docker-ic-batch-03:v2
+
+# previous image replica
+docker tag shosen/docker-ic-batch-03:v2  docker-ic-batch-03:v3
+
+result:
+docker-ic-batch-03                   v3                12c14526229f   9 minutes ago    164MB
+shosen/docker-ic-batch-03            v2                12c14526229f   9 minutes ago    164MB
+
+# single platform image
+# multi platform iamge
+
+uname -m
+x86_64
+
+OS/ARCH
+linux/amd64
+
+docker info
+
+-------------------------------------------------------------------------------
+# multi platform config
+-------------------------------------------------------------------------------
+
+https://docs.docker.com/engine/storage/containerd/
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+export DOCKER_CLI_EXPERIMENTAL=enabled
+
+docker build --platform linux/arm64,linux/amd64 -t shosen/docker-ic-batch-03:v3 .
+docker build --platform linux/arm64,linux/amd64 -t shosen/docker-ic-batch-03:v3 --push .
+docker push shosen/docker-ic-batch-03:v3
+
+docker buildx ls
+docker buildx create --name docker-ic-batch-03:v3 --driver docker-container --bootstrap --use
+docker buildx build --platform linux/arm64,linux/amd64 -t shosen/docker-ic-batch-03:v4 --push .
+
+
+docker pull --platform linux/amd64 -t shosen/docker-ic-batch-03:v4
+docker manifest inspect shosen/docker-ic-batch-03:v4
+
+# qemu emulation
+docker buildx du
+docker buildx prune
+
+-------------------------------------------------------------------------------
+multi state
+-------------------------------------------------------------------------------
+every command is a stage
+docker build -t docker-ic-batch-03 .
+docker run --rm -it docker-ic-batch-03 sh
+
+docker build -t devops-ic-batch-03:single-staget .
+docker build -t devops-ic-batch-03:multi-staget .
+docker images
+docker run --rm -it devops-ic-batch-03:single-staget sh
+cat /etc/os-release
+docker inspect devops-ic-batch-03:single-staget
+
+docker build --target dev -t devops-ic-batch-03:multi-staget .
+docker build --target prod -t devops-ic-batch-03:multi-staget .
