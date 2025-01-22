@@ -78,3 +78,11 @@ docker inspect devops-ic-batch-03:single-staget
 
 docker build --target dev -t devops-ic-batch-03:multi-staget .
 docker build --target prod -t devops-ic-batch-03:multi-staget .
+
+Dockerfile.dev
+Dockerfile.prod
+
+# relative path
+docker build --target dev -t devops-ic-batch-03:multi-stage -f api/Dockerfile.dev .
+
+

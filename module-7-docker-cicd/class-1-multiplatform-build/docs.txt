@@ -58,3 +58,11 @@ docker manifest inspect shosen/docker-ic-batch-03:v4
 # qemu emulation
 docker buildx du
 docker buildx prune
+
+
+# multi platform build option
+1. budild kit, build x
+2. container d enable
+docker buildx build --platform linux/arm64 -t devops-ic-batch-03:arch-image .
+
+docker buildx build  --platform  linux/arm64 -t devops-ic-batch-03:arch-image --load .

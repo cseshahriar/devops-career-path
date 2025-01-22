@@ -4,10 +4,12 @@ FROM python:3.9.21-slim AS build
 
 WORKDIR /app
 
-RUN apt update && apt install -y build-essential \
-    gcc \
-    libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt update && apt install -y build-essential \
+#     gcc \
+#     libpq-dev \
+#     && rm -rf /var/lib/apt/lists/*
+# RUN apk update && apk add build-essential
+RUN apk update && apk add build-tools
 
 ADD app/requirements.txt .
 
