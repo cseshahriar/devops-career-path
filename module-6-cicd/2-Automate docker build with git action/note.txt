@@ -1,0 +1,21 @@
+repo: https://github.com/obijzbo/fastapi-sample-project
+
+today class:
+------------
+code
+dockerfile build
+build use in compose
+then run docker compose file
+
+CI: pull, build and test is CI
+------------------------------
+
+github -> actions -> new wirkflows
+.githum/workflows -> 
+    - code-test.yml
+    - docker-test.yml
+    - main-ci.yaml
+
+
+# secreact key, value management
+# H.W : run work flow files, secreact key management

@@ -1,0 +1,36 @@
+# show running containers
+docker ps
+
+# all containers
+docker ps -a
+
+# show images
+docker images
+
+# remove
+docker stop name
+
+# remove containers
+docker docker rm name
+
+# remove images
+docker rmi tag name name
+# remove all images
+docker rmi -f $(docker images -aq)
+
+
+# pull
+docker pull nginx
+
+# run container from image
+docker run nginx
+
+# container instance of image
+
+# pull and run container
+docker run -p 80:80 nginx
+
+# inspect
+docker exec -it crazy_kepler /bin/bash
+
+# 18 "

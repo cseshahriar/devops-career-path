@@ -1,0 +1,3 @@
+- create virtual environment
+- install global gcc/related build tools
+- pip install gcc

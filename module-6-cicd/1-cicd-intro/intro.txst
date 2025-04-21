@@ -1,0 +1,31 @@
+What is a CI/CD pipeline?
+A continuous integration and continuous deployment (CI/CD) pipeline is a series of established steps that developers must follow in order to deliver a new version of software. CI/CD pipelines are a practice focused on improving software delivery throughout the software development life cycle via automation.
+
+By automating CI/CD throughout development, testing, production, and monitoring phases of the software development lifecycle, teams are able to develop higher quality code, faster and more securely. Automated testing also allows dependencies and other issues to be identified earlier in the software development lifecycle, saving time later. Although it’s possible to manually execute each of the steps of a CI/CD pipeline, the true value of CI/CD pipelines is realized through automation.
+
+CI/CD pipelines have advantages for software organizations that use virtual machines as well as container-based cloud-native applications. With the ability to more quickly integrate updates and changes to code, teams can respond to user feedback and business changes frequently and effectively, leading to positive outcomes for end users. 
+
+How do CI/CD pipelines relate to DevOps?
+CI/CD pipelines, which streamline and accelerate software development, are a reflection of DevOps methodology, a set of ideas and practices that fosters collaboration between developers and IT operations teams.
+
+The CI side of CI/CD refers to continuous integration, which includes building, testing, and merging code. The CD side can stand for continuous delivery, which includes automatically releasing software to a repository. CD can also stand for continuous deployment, which adds the step of automatically deploying software to production.
+
+A CI/CD pipeline guides the process of software development through a path of building, testing, and deploying code. By automating the processes that support CI/CD, development and operations teams can minimize human error and maintain a consistent process for how software is released. Pipelines can include tools for compiling code, unit tests, code analysis, security, and binaries creation. For containerized environments, pipelines will also include tools for packaging the code into a container image to be deployed across a hybrid cloud.
+
+Both CI/CD and DevOps focus on automating processes of code integration, thereby speeding up how an idea (like a new feature, a request for enhancement, or a bug fix) goes from development to deployment in a production environment where it can provide value to the user. Developers, usually coding in a standard development environment, work closely with IT operations to speed software builds, tests, and releases—without sacrificing reliability.
+
+
+CI:
+- jenkins
+- SonarQube
+- Github Actions
+- CodeQL
+
+CD:
+- Docker release pipeline
+- Jenkins
+- Github Actions
+
+Ansible:
+- Server Management/ Configuration Management
+- Continous deployment
