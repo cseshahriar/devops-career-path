@@ -1,0 +1,37 @@
+# Access Django container shell
+docker compose exec web bash
+
+# Run migrations
+docker compose exec web python manage.py migrate
+
+# Create superuser
+docker compose exec web python manage.py createsuperuser
+
+# Access PostgreSQL from host (using psql)
+psql -h localhost -p 5433 -U docker_user -d mydjangodb
+
+docker compose logs -f	View container logs
+docker compose restart web	Restart Django
+
+# Build and Run
+docker compose build
+
+docker ps
+
+# Start Containers
+docker compose up
+
+# build and up
+docker compose up --build
+docker compose run web python manage.py collectstatic
+
+docker compose down -v  # ⚠️ Destroys all volumes, including db data!
+
+# Stop Containers
+docker compose down
+
+# Stops containers but retains database volume
+docker compose down -v
+
+# for production
+command: gunicorn --bind 0.0.0.0:8000 your_project.wsgi:application
