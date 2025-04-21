@@ -1,20 +1,22 @@
+# This specifies the version of the Docker Compose file syntax being used. Version 3.8 is compatible with most Docker setups and provides good balance between features and compatibility.
 version: '3.8'
 
+# Defines the services (i.e., containers) that will be run. In your case, db (PostgreSQL) and web (your Django app).
 services:
-  db:
+  db: # db Service (PostgreSQL)
     image: postgres:15
     restart: always
-    environment:
+    environment: # Sets environment variables to configure the initial PostgreSQL database, user, and password. These values are pulled from a .env file.
       - POSTGRES_DB=${DB_NAME}
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
-    volumes:
+    volumes:  # This mounts the named volume postgres_data to the location inside the container where PostgreSQL stores its data, making sure that your database persists even if the container is removed.
       - postgres_data:/var/lib/postgresql/data/
     ports:
       - "5433:5432"  # Host:5433 → Container:5432
 
-  web:
-    build: .  # Builds from Dockerfile
+  web: 
+    build: .  # Builds from Dockerfile, Tells Docker Compose to build this service from the Dockerfile in the current directory.
     command: >
       sh -c "python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8080"
@@ -22,11 +24,11 @@ services:
       - .:/app  # Live code reload
     ports:
       - "8080:8080"
-    env_file:
+    env_file:  # Loads environment variables from a .env file into the container.
       - .env
-    depends_on:
+    depends_on:  # Ensures that the db service starts before the web service.
       - db
     restart: unless-stopped
 
 volumes:
-  postgres_data:
+  postgres_data:  # Restarts the container unless it is explicitly stopped. Useful for production or long-running environments.

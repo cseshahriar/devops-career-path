@@ -27,11 +27,47 @@ docker compose run web python manage.py collectstatic
 
 docker compose down -v  # ⚠️ Destroys all volumes, including db data!
 
+# run 
+docker run -d -p 8080:8080 --name my_django_container docker-django-web
+
+-d runs the container in detached mode (background).
+-p 8080:8080 maps port 8080 on your local machine to port 8080 inside the container (assuming your Django app runs on port 8000).
+--name my_django_container names your container for easy reference.
+- docker-django-web is the image name.
+- docker rm my_django_container
+
+# access container
+docker exec -it my_django_container /bin/bash
+
+
 # Stop Containers
 docker compose down
-
-# Stops containers but retains database volume
-docker compose down -v
+docker compose down -v # Stops containers but retains database volume
 
 # for production
 command: gunicorn --bind 0.0.0.0:8000 your_project.wsgi:application
+
+List Docker images:
+docker images
+
+List Docker containers:
+docker ps
+docker ps -a  # To list all containers, including stopped ones
+
+docker logs <container_name_or_id>
+docker inspect <container_name_or_id>
+
+# remove images 
+docker rmi <image_name_or_id> 
+docker rmi <image_name_or_id_1> <image_name_or_id_2>
+
+i.e docker rmi myimage:latest
+i.e docker rmi myimage:latest another_image:tag
+
+# remove all
+docker rmi $(docker images -q)
+
+# remove container
+docker stop <container_name_or_id>
+docker rm <container_name_or_id>
+docker container prune
