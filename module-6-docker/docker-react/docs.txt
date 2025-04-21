@@ -1,0 +1,9 @@
+# Build the Docker image
+docker build -t vite-react-app .
+
+# Run the container
+docker run -p 8080:80 vite-react-app
+
+
+docker build -f Dockerfile.dev -t vite-react-dev .
+docker run -p 5173:5173 -v $(pwd):/app vite-react-dev
