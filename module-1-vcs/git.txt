@@ -1,3 +1,6 @@
+
+git init --help
+
 Live Class 02 - 23 October: Introduction to Git
 -----------------------------------------------
     # git commit message convention
@@ -41,8 +44,9 @@ Live Class 02 - 23 October: Introduction to Git
     https://walaoeh.medium.com/level-up-your-vscode-terminal-to-oh-my-zsh-shell-on-windows-10-d3e067179b50
 
 
+-----------------------------------------------------------
 Live 03 - 30 October : Git reset and rebase (commit undo)
------------------------------------------------
+-----------------------------------------------------------
     git commit -m "New garbage commit" -m "This is a description example"
     git log
 
