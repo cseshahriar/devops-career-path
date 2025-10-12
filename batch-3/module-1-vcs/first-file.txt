@@ -1,3 +1,3 @@
 abcd
 interactive rebasing
-new line updated
+new line updated 2nd time
