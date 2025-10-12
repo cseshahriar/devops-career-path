@@ -1,0 +1,28 @@
+bash:
+-----
+| Command            | Description            |
+| ------------------ | ---------------------- |
+| `pwd`              | Show current directory |
+| `ls`               | List files             |
+| `cd dir`           | Change directory       |
+| `mkdir name`       | Create folder          |
+| `rm file`          | Remove file            |
+| `cp a b`           | Copy                   |
+| `mv a b`           | Move/Rename            |
+| `grep "text" file` | Search in file         |
+| `chmod +x file.sh` | Make executable        |
+| `./file.sh`        | Run script             |
+
+commands:
+awk
+sed
+set -e
+set -euo pipefall
+exit 1
+
+soft link
+had link
+inode
+file
+
+ref: https://devhints.io/bash
