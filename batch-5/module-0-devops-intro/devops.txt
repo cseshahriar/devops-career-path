@@ -1,0 +1,99 @@
+What is devops ?
+
+"DevOps is a combination of software development (dev) and operations (ops).
+It is defined as a software engineering methodology which aims to integrate the work of development teams
+and operations teams by facilitating a culture of collaboration and shared responsibility."
+
+The DevOps lifecycle:
+-------------------------------------------------------------------------------
+1. Plan 📋: Defining the project goals and requirements.
+2. Code 💻: Writing and reviewing the software code.
+3. Build 🛠️: Compiling the code into an executable artifact.
+4. Test ⚙️: Conducting various tests to ensure quality.
+5. Release 🚀: Packaging and preparing the build for deployment.
+6. Deploy 🌐: Installing and configuring the software in the target environment.
+7. Operate ⚙️: Managing and maintaining the software in production.
+8. Monitor 📈: Collecting data on performance and usage to inform future planning.
+
+Software deploy requirements:
+-----------------------------
+1. domain
+2. network(VPC)
+3. public ip, port open, public or private access
+4. storages
+5. db
+6. frontend/backend
+
+test:
+    functional test
+    integrity test
+    security test
+    vulnerability test
+    unit test
+    api test
+    load testing
+    then release (Artifact)
+    artifact: deployable image or docker image
+
+# DevOps relation with System Design
+
+SDLC(Software development Life Cycle) ?
+---------------------------------------
+stage 1: Planning and Requirements Analysis
+stage 2: Defining Requirements
+stage 3: Architectural Design
+stage 4: software development
+stage 5: testing
+stage 6: development and Maintenance
+
+
+Agile Methodology ?
+-------------------
+The diagram illustrates a cyclical process that is characteristic of Agile development,
+which typically includes iterative steps like:
+* Plan (start of a cycle)
+* Design
+* Develop
+* Test
+* Deploy
+* Review
+
+DevOps after deployment:
+
+secure : like port security
+[
+    plane-> create -> verify -> package -> deploy -> monitor -> repeat
+]
+Govern :
+
+multiple services :
+---------------------
+
+
+**Common Roles and Responsibilities**
+* Application & infrastructure planning, testing and development
+* Maintaining **CI/CD** pipelines
+* **Automation** implementation
+* On-call, incident response and incident management
+* **Monitoring**
+
+What will you learn?:
+---------------------
+* GIT (VCS)
+* Scripting (bash)
+* Linux
+* Networking (http, DNS, VPC, Subnetting, Routing)
+* CI/CD (Jenkins, Git Action)
+* Containerization (Docker) (50% of devops)
+---------------------------------------------------
+* Container Orchestration (Kubernetes)
+* IaC and Provisioning (Terraform, Ansible)
+* Cloud Services (AWS EC2, load balancer, S3, lambda, RDS, VPC)
+* Monitoring (Prometheus & Grafana)
+
+Prerequisites:
+--------------
+Github Account
+Docker Hub Account
+Ubuntu 22.04 or Ubuntu 24.04 server VM (preferable)
+AWS account (preferable)

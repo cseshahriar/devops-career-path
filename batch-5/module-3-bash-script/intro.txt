@@ -1,4 +1,14 @@
-A shell script is a computer program designed to be run by the Unix/Linux 
+
+# after on board developer need task
+1. git access
+2. local development env
+    1. code clone -> script (shell/bash, py, js) cal clone 50 service codebase clone
+    2. system requirement check -> (shell script)
+    3. rules/convention -> script()
+
+
+
+A shell script is a computer program designed to be run by the Unix/Linux
 shell which could be one of the following:
 
 The Bourne Shell
@@ -6,7 +16,7 @@ The C Shell
 The Korn Shell
 The GNU Bourne-Again Shell
 
-A shell is a "command-line interpreter" and "typical operations performed" 
+A shell is a "command-line interpreter" and "typical operations performed"
 by shell scripts include file manipulation, program execution, and printing text.
 
 A shell script is a computer program designed to be run by the Unix/Linux shell which could be one of the following:
@@ -35,11 +45,11 @@ The different C-type shells follow −
 * TENEX/TOPS C shell (tcsh)
 
 
-The original Unix shell was written in the "mid-1970s" 
+The original Unix shell was written in the "mid-1970s"
 by "Stephen R. Bourne" while he was at the AT&T Bell Labs in New Jersey.
 
 "Bourne shell" was the first shell to appear on Unix systems, thus it is referred to as "the shell".
-Bourne shell is usually installed as "/bin/sh" on most versions of Unix. For this reason, 
+Bourne shell is usually installed as "/bin/sh" on most versions of Unix. For this reason,
 it is the shell of choice for writing scripts that can be used on different versions of Unix.
 In this chapter, we are going to cover most of the Shell concepts that are based on the Borne Shell.
 
