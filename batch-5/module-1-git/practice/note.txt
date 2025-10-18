@@ -1,0 +1,6 @@
+touch first-file.txt
+vim fist-file.txt
+i
+:wq
+
+git add first-file.txt
