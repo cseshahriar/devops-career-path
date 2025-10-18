@@ -4,3 +4,4 @@ i
 :wq
 
 git add first-file.txt
+commit message always present tens and meaning full
