@@ -1,0 +1,68 @@
+﻿Submission Date: 25/10/2025
+
+Assignment Instruction:
+The assignment has seven sections. Create a git repository, and add each section as a shell script. Submit the git repository link in the classroom as your classwork.
+
+Evaluation Criteria:
+Each shell script will be executed on a virtual machine. All files created by the scripts need to be saved in the current user's home directory. Each shell script should produce the expected output. If the shell script for a section fails to produce all the expected output, the points for that section will not be provided.
+For example: if file_nav.sh produce home_list.txt and var_log.txt in the current user's home directory, and in the terminal, it displays the path of the bash executable and the current shell, then you will get 10 points. Else, you will get 0.
+
+The rest of the 30 Points will be distributed as such:
+- Script execution flow
+- Code structure
+
+Shell Script Breakdown:
+Each script should produce the exact same output as outlined below.
+File System Navigation (10 Points) -> file_nav.sh
+    • List all the contents of the current user's home directory, and save it in a file named home_list.txt.
+    • Change the current directory to /var/log, list its contents, and save it in a file named var_log.txt.
+    • Find and display the path to the bash executable using the which command.
+    • Find and display the current shell
+File and Directory Operations (10 Points) -> file_and_dir.sh
+    • Create a directory named linux_fundamentals in the current user's home directory.
+    • Inside linux_fundamentals, create a subdirectory named scripts.
+    • Create an empty file named example.txt inside the linux_fundamentals directory.
+    • Copy example.txt to the scripts directory.
+    • Move example.txt from linux_fundamentals to linux_fundamentals/backup.
+    • Change the permissions of example.txt to read and write for the owner, and read-only for the group and others.
+    • Verify and display the permission changes.
+File Modification (10 Points) -> file_mod.sh
+    • Create a file named example.txt in the current user's home directory.
+    • Create a new user without a home and shell named student.
+    • Change the owner of example.txt to a user named student.
+    • Change the group of example.txt to a group named student.
+    • Verify and display the permission changes.
+Ownership (10 Points) -> file_own.sh
+    • Create a directory named project in the current user's home directory.
+    • Create a file named report.txt inside the project directory.
+    • Set the permissions of report.txt to read and write for the owner, and read-only for the group and others.
+    • Set the permissions of the project directory to read, write, and execute for the owner, and read and execute for the group and others
+    • Verify and display the permission changes.
+User add/modify (10 Points) -> user_mod.sh
+    • Create a new user named developer.
+    • Set the home directory of the user developer to /home/developer_home.
+    • Assign the shell /bin/sh to the user developer.
+    • Verify and display the developer user's information.
+    • Change the username of the user developer to devuser.
+    • Add the devuser to a group named devgroup.
+    • Set the password of the devuser to devpass. (Hint: use the passwd command. Run passwd --help to see available options.
+    • Verify and display the changes made to the user.
+Hard/Soft Link (10 Points) -> soft_hard.sh
+    • Create a file named original.txt in the current user's home directory.
+    • Create a symbolic link named softlink.txt pointing to original.txt.
+    • Verify and display the symbolic link.
+    • Delete the original file original.txt.
+    • Verify and display the status of the symbolic link.
+    • Create a file named datafile.txt in the current user's home directory.
+    • Create a hard link named hardlink.txt pointing to datafile.txt.
+    • Verify and display the hard link.
+    • Display the inode of both datafile.txt and hardlink.txt
+    • Delete the original file datafile.txt.
+    •  Verify and display the status of the hard link.
+    • Find all .txt files in the current user's home directory and save them in a file named file_list.txt. (Use the find command. Run find --help for usage)
+Package installation (10 Points) -> package_install.sh
+    • Update repo cache using apt/apt-get
+    • Install a package named tree
+    • Install the gcloud CLI tool using apt ( Follow instructions from here: https://cloud.google.com/sdk/docs/install#deb )
+
+
