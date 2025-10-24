@@ -1,7 +1,7 @@
 # devops-career-path
-DevOps Career Path - Batch 3
+DevOps Career Path - Batch 5
 
-## What will you learn ?
+## What will you learn?
     1. Git(vcs)
     2. Scripting(bash)
     3. Linux
