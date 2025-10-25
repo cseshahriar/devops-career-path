@@ -65,4 +65,12 @@ Package installation (10 Points) -> package_install.sh
     • Install a package named tree
     • Install the gcloud CLI tool using apt ( Follow instructions from here: https://cloud.google.com/sdk/docs/install#deb )
 
+# create repo locally
+mkdir linux-assignment-01
+cd linux-assignment-01
 
+# Save the above scripts as files exactly with these names:
+# file_nav.sh file_and_dir.sh file_mod.sh file_own.sh user_mod.sh soft_hard.sh package_install.sh
+
+# make all executable
+chmod +x *.sh
