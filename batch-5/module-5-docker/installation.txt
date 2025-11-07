@@ -1,0 +1,140 @@
+Here's a complete guide to properly set up Docker on Debian:
+
+## Step 1: Uninstall Old Versions (if any)
+sudo apt remove docker docker-engine docker.io containerd runc
+sudo apt purge docker-ce docker-ce-cli containerd.io
+
+## Step 2: Install Prerequisites
+sudo apt update
+sudo apt install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+## Step 3: Add Docker's Official GPG Key
+
+# Create keyring directory
+sudo install -m 0755 -d /etc/apt/keyrings
+
+# Download and add Docker's GPG key
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+# Set proper permissions
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+## Step 4: Add Docker Repository
+# Add the repository to Apt sources
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update package index
+sudo apt update
+
+## Step 5: Install Docker Engine
+
+# Install Docker components
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+## Step 6: Start and Enable Docker Service
+
+# Start Docker service
+sudo systemctl start docker
+
+# Enable Docker to start on boot
+sudo systemctl enable docker
+
+# Check Docker status
+sudo systemctl status docker
+
+## Step 7: Configure User Permissions
+
+# Add your user to docker group
+sudo usermod -aG docker $USER
+
+# Apply group changes (logout/login or use newgrp)
+newgrp docker
+
+## Step 8: Verify Installation
+
+# Test Docker installation
+docker --version
+docker compose version
+
+# Run test container
+docker run hello-world
+
+## Step 9: Configure Docker Daemon (Optional)
+
+Create Docker daemon configuration:
+# Create docker directory if it doesn't exist
+sudo mkdir -p /etc/docker
+
+# Create daemon.json configuration
+sudo tee /etc/docker/daemon.json > /dev/null <<EOF
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  },
+  "storage-driver": "overlay2"
+}
+EOF
+
+# Restart Docker to apply changes
+sudo systemctl restart docker
+
+## Step 10: Install Docker Compose (if not using plugin)
+
+If you prefer the standalone Docker Compose:
+# Download latest Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# Make it executable
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Verify installation
+docker-compose --version
+
+## Troubleshooting
+
+If you still get permission errors after adding to docker group:
+# Logout and login again, or restart the system
+sudo reboot
+
+# Or manually trigger group refresh
+newgrp docker
+
+# Verify your user is in docker group
+groups $USER
+
+# Check docker socket permissions
+ls -l /var/run/docker.sock
+
+## Useful Docker Commands for Management
+# Check Docker system info
+docker info
+
+# See running containers
+docker ps
+
+# See all containers
+docker ps -a
+
+# Check Docker logs
+sudo journalctl -u docker.service
+
+# Clean up unused containers and images
+docker system prune
+
+## Security Considerations
+
+- Only add trusted users to the docker group
+- Regularly update Docker: `sudo apt update && sudo apt upgrade`
+- Consider using rootless mode for enhanced security in production
+
+This setup gives you a properly configured Docker installation on Debian with the official Docker repositories for easy updates and maintenance.

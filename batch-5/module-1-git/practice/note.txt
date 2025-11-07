@@ -12,3 +12,7 @@ git remote : view all remote
 git remote add origin https://github.com/user/repo.git
 remove: git remote remove origin
 rename : git remote rename origin upstream
+
+# conceptual class
+same conflict
+conflict with other branch

@@ -1,0 +1,101 @@
+why need docker ?
+
+2gb ram + 1vcpu     4gb ram + 2vcpu      4gb ram + 2vcpu
+ubuntu                ubuntu             ubuntu
+[FE]                  [BE]               [DB]               ------> containerization
+vm                    vm                 vm
+setup                 setup               setup
+
+docker:
+- Efficiency
+- Consistency
+- Portability
+- Isolation
+
+quote: DevOps lives on terminal
+
+Docker: client server architecture
+Developer -> Docker client -> docker daemon -> containers
+                                |
+                                Docker Registry(docker hub)
+                                |
+                                Docker Images
+
+Docker Image:
+---------------------------------
+- Blueprint of our application
+- Contains everything needed
+- Can be versioned
+
+Your Application        -> layer 4
+Application Dependency  -> layer 3
+Python/Node runtime     -> layer 2
+Base OS(Ubuntu/Alpine)  -> layer 1
+---- 4 layer combination is docker image ---
+
+steps: build then run, share by docker registry or docker hub
+
+Docker Container:
+----------------------------------
+- runnable version of image
+- runs in an isolated env where it's own namespaces
+- same images can be used to run multiple containers
+
+namespaces:
+- PID (process separation)
+- net (network isolation)
+- mnt (filesystem)
+
+commands:
+--------------------------
+docker
+docker info
+unix socket communication
+docker run --help
+
+
+pull image:
+    docker pull nginx:1.29.3-alpine
+
+show image:
+    docker images
+
+run image:
+    docker run nginx
+    docker run nginx:1.29.3-alpine
+
+    foreground run:
+        docker run --name nginx-server nginx:1.29.3-alpine
+
+    background run:
+        docker run --name nginx-server --detach  nginx:1.29.3-alpine
+        docker run --name nginx-server -d  nginx:1.29.3-alpine
+
+                                            host:container post bind
+        docker run --name nginx-server -d -p 8080:80  nginx:1.29.3-alpine
+
+show running container:
+- docker ps
+
+container list:
+- docker ps -q → lists all running container IDs only.
+
+Stop container:
+- docker stop id → stops the containers with those IDs.
+- docker stop nginx-server-v2
+
+remove containers:
+- docker rm nginx-server-v2
+
+remove all:
+- docker rm $(docker ps -aq)
+
+logs:
+- docker logs container-name
+- docker logs nginx-server
+- docker logs nginx-server-v2
+- docker logs nginx-server-v3
+
+image inspect:
+- docker inspect nginx:1.29.3-alpine
+
