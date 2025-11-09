@@ -1,3 +1,17 @@
+ক্লাসরুমে গিট (Git) সম্পর্কিত কিছু রিসোর্স শেয়ার করা হয়েছে।
+ওগুলো ভালোভাবে পড়ে নিন — তাহলে গিট টপিকটা কাভার করতে পারবেন।
+
+আর লিনাক্সের জন্য লাইভ ক্লাস আর কনসেপ্টচুয়াল ক্লাসগুলো এই উইকেন্ডের মধ্যে দেখে নিন।
+যদি কোনো টপিক বুঝতে সমস্যা হয়, তাহলে সন্ধ্যা ৭:৩০ বা রাত ১০:৩০ এর সাপোর্ট সেশনে যোগ দিন।
+
+Some Git resources have been shared in the classroom.
+Please go through them — that will help you cover the Git topic.
+
+Also, watch the live and conceptual classes for Linux by this weekend.
+
+If you have trouble understanding any topic, join the support session at 7:30 PM or 10:30 PM.
+=============================================================================================
+
 touch first-file.txt
 vim fist-file.txt
 i
