@@ -8,7 +8,7 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run Flask app
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]
 
 # Set working directory
 # WORKDIR /app

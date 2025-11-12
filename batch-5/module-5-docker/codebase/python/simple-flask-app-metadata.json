@@ -1,0 +1,50 @@
+[
+    {
+        "Id": "sha256:72a5f8d1efaf7f0fe9f82cbceb4c92016bf342c808d2cd86a80fb06e031d13f7",
+        "RepoTags": [
+            "simple-flask-app:v2"
+        ],
+        "RepoDigests": [],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-11-12T09:14:50.976543331+06:00",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.14",
+                "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78"
+            ],
+            "Cmd": [
+                "python3"
+            ],
+            "WorkingDir": "/"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 69589847,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/e5ajxq6i7iuatip1c822v6fj8/diff:/var/lib/docker/overlay2/f9bb0bde794c74526a7d0814d422495b07264f1e2a6ae1d4b9afdc5c19503d9c/diff:/var/lib/docker/overlay2/af89b59604a4f6e9794bd3cb86ab8b94b10ffddf67b51d7482911350cdd270f5/diff:/var/lib/docker/overlay2/cb8597de6f4b54f965d65beb9cc70a73ef4392e92eed7a145f9bc21838973371/diff:/var/lib/docker/overlay2/51fe305a8e4c01392148f998d0656d9cea21826116bbe05d5fb487dd902fb232/diff",
+                "MergedDir": "/var/lib/docker/overlay2/wvyqubml3j5t1zsqs0h4ch3ej/merged",
+                "UpperDir": "/var/lib/docker/overlay2/wvyqubml3j5t1zsqs0h4ch3ej/diff",
+                "WorkDir": "/var/lib/docker/overlay2/wvyqubml3j5t1zsqs0h4ch3ej/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:256f393e029fa2063d8c93720da36a74a032bed3355a2bc3e313ad12f8bde9d1",
+                "sha256:740cd0d92ced7f223cbc8460d2c28e4fb16b3ed133419b69671e07df4e5b2b55",
+                "sha256:ee5e11104b664cf1c5ac272deea4a1b99b4a308615b18f6e5efdb5c5f723f731",
+                "sha256:eb463c115a589adcaf97ce1ebe3ad6918d8711be4193eb8780abfea45ad05e35",
+                "sha256:e9d0a4948a11d983984ef146aa8969fe95b06d80665962aff4524ba12ebcc11a",
+                "sha256:2034e945035aede7d31c51290a9f22b5179a360f8e1b1e9006c47a49ebdfede2"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2025-11-12T09:14:51.115294685+06:00"
+        }
+    }
+]
