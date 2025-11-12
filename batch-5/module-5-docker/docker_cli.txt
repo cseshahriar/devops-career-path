@@ -1,0 +1,126 @@
+Docker CLI:
+
+pull:
+-------------------
+- docker pull nginx
+- docker pull nginx:latest
+
+list of images:
+---------------
+- docker images
+
+list of running containers:
+---------------------------
+- docker ps
+
+list of all containers:
+-----------------------
+- docker ps -a
+
+start container:
+----------------
+docker start image_name or id
+i.e docker start 11216022dc55
+
+stop container:
+---------------
+docker stop 11216022dc55
+
+log (-f for realtime):
+- docker logs -f nginx-server-v3
+
+run docker image(container):
+----------------------------
+- docker run --name nginx-server-v3 -d -p 8080:80 nginx:1.29.3-alpine
+- docker run --name nginx-server-v4 -d -p 8090:80 nginx:1.29.3-alpine
+
+-d
+detached মোডে (background-এ) চালায়
+
+-p 8080:80
+হোস্ট মেশিনের 8080 পোর্টকে কন্টেইনারের ভিতরের 80 পোর্টের সাথে ম্যাপ করছে — অর্থাৎ তুমি ব্রাউজারে
+http://localhost:8080 খুললে NGINX দেখাবে
+
+
+test isolation:
+---------------
+same image run multiple container
+
+stop container and remove than start:
+-------------------------------------
+docker stop nginx-server-v2
+docker rm nginx-server-v2
+docker run --name nginx-server-v2 -d -p 8090:80 nginx:1.29.3-alpine
+
+execute inside container:
+- docker exec nginx-server-v2 sh
+- docker exec nginx-server-v2 ls /var
+
+inside docker image interactive shell:
+--------------------------------------
+- docker exec -i -t nginx-server-v2 sh
+- which $SHELL
+- env
+- cat /etc/os-release
+- ps aux
+
+
+docker pull python:latest
+docker run -i -t python:latest bash
+python --version
+
+=================
+goal image build:
+=================
+- cd python
+- docker build -f Dockerfile .
+- last dot is current path
+- docker images
+
+build image nad run container:
+------------------------------
+- docker build -f Dockerfile -t simple-flask-app:v1 .
+- docker run -d -p 5000:5000 simple-flask-app:v1
+
+without cmd:
+- docker build -f Dockerfile -t simple-flask-app:v2 .
+- docker run -d -p 5000:5000 simple-flask-app:v2
+
+inspect v2:
+--------
+docker inspect simple-flask-app:v2 > simple-flask-app-metadata.json
+docker run -d -p 5001:5000 simple-flask-app:v2 (run and close)
+docker run -d -p 5001:5000 simple-flask-app:v2 python app.py
+
+image history:
+--------------
+docker history simple-flask-app:v1
+docker history simple-flask-app:v2
+
+=====node ======
+- docker build -t simple-node-app:v1 .
+- docker mages
+- docker run -d -p 3000:3000 simple-node-app:v1
+- http://localhost:3000/
+
+=========== django =====
+docker build -t django-demo .
+docker run -it -p 8000:8000 django-demo:v1
+
+
+Stop All Running Containers
+- docker stop $(docker ps -aq)
+
+Remove All Containers
+- docker rm $(docker ps -aq)
+- docker rmi -f $(docker images -q)
+
+Optional: Remove All Volumes
+- docker volume rm $(docker volume ls -q)
+
+Optional: Remove All Networks (except default)
+- docker network rm $(docker network ls -q)
+
+Quick “one-liner” to remove everything
+- docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi -f $(docker images -q) && docker volume rm $(docker volume ls -q)
+
