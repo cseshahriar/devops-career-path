@@ -1,0 +1,44 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Django Specific ===
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+db.sqlite3
+instance/
+local_settings.py
+.env
+.env.*
+.envrc
+*.env
+.env.bak
+
+# === Media & Static Files ===
+media/
+staticfiles/
+static/
+assets/
+build/
+dist/
+
+# === Django Migrations Cache ===
+*/migrations/__pycache__/
+*/migrations/*.py[cod]
+
+# Keep migration files if you want them tracked
+# Uncomment the next line to ignore all migrations:
+# */migrations/
+
+# === Virtual Environment ===
+venv/
+ENV/
+env/
+.venv/
+
+# === IDE
