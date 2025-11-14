@@ -1,0 +1,6 @@
+dbdata
+Dockerfile
+tests
+*.pyc
+__pycache__
+instance/

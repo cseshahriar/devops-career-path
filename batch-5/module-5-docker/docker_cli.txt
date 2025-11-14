@@ -124,3 +124,19 @@ Optional: Remove All Networks (except default)
 Quick “one-liner” to remove everything
 - docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi -f $(docker images -q) && docker volume rm $(docker volume ls -q)
 
+================== class cli 2 ============
+ docker images
+ docker inspect simple-flask-app
+
+ docker build -t simple-flask-app:v1 .
+ docker build -t simple-flask-app:v2 .  # dot is build path or where Docker file available
+ docker build -t simple-flask-app:v3 --build-arg PYTHON_VERSIOn=3.9
+
+ docker run -it -p 5000:5000 simple-flask-app:v3  # shell open
+
+ dangling image
+ docker image --filter=dangling=true
+
+run shell:
+----------
+docker run -it --rm simple-flask-app:v3 bash
